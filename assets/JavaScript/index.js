@@ -38,7 +38,7 @@ btnAdd.addEventListener('click', async () => {
 
     try {
         // Faz a requisição de criação (POST) para a API
-        const response = await fetch(`https://localhost:${portaApi}/api/Funcionarios`, {
+        const response = await fetch(`https://localhost:${portaApi}/api/Employee`, {
             method: 'POST', 
             headers: { 
                 'Content-Type': 'application/json' 

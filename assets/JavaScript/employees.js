@@ -9,7 +9,7 @@ const portaApi = "7083";
 async function carregarFuncionarios() {
     try {
         // Faz a requisição para a rota principal da API
-        const response = await fetch(`https://localhost:${portaApi}/api/Funcionarios`);
+        const response = await fetch(`https://localhost:${portaApi}/api/Employee`);
         const lista = await response.json(); // Converte a resposta em uma lista de objetos
 
         // Limpa o container antes de colocar os novos cards para não duplicar
@@ -54,7 +54,7 @@ function irParaEditar(id) {
 async function deletar(id) {
     if (confirm("Are you sure you want to delete this employee?")) {
         // Faz a chamada de exclusão para a URL específica do funcionário
-        const response = await fetch(`https://localhost:${portaApi}/api/Funcionarios/${id}`, {
+        const response = await fetch(`https://localhost:${portaApi}/api/Employee/${id}`, {
             method: 'DELETE' // Define o método HTTP como DELETE
         });
         

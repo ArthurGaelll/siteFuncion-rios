@@ -11,7 +11,7 @@ let dadosOriginais = {};
  */
 async function carregarDados() {
     // Faz uma requisição GET para a URL específica do funcionário usando o ID
-    const response = await fetch(`https://localhost:${portaApi}/api/Funcionarios/${idParaEditar}`);
+    const response = await fetch(`https://localhost:${portaApi}/api/Employee/${idParaEditar}`);
     
     // Se a resposta for positiva (status 200), processamos os dados
     if (response.ok) {
@@ -43,7 +43,7 @@ document.querySelector('.btn-save').addEventListener('click', async () => {
     };
 
     // Faz a requisição de atualização (PUT) para a API
-    const response = await fetch(`https://localhost:${portaApi}/api/Funcionarios/${idParaEditar}`, {
+    const response = await fetch(`https://localhost:${portaApi}/api/Employee/${idParaEditar}`, {
         method: 'PUT', // Método HTTP usado para alteração completa
         headers: { 
             'Content-Type': 'application/json' // Avisa a API que estamos enviando um arquivo JSON
